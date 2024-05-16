@@ -1,6 +1,11 @@
-# docker-noop
-Prints output from `fortune` for giggles and then sleeps forever or until interrupted, whichever occurs first.
-
+## Flavors
+|    **Tag**    | **Description**                                                | 
+|:-------------:|----------------------------------------------------------------|
+|    exited     | Outputs `fortune` and exits with error code 0                    |
+| exited-quiet  | Just exits with error code 0                                   |
+|    running    | Outputs `fortune`, sleeps, and exits with error code 0 on signal |
+| running-quiet | Just sleeps and exits with error code 0 on signal              |
+## Example
 ```
 ┌──[▄‽ᵇ]─[▂▂▂ˡ]─[▄ᵐ▁ˢ]──·[Wed·15·23:35]·
 │ main !trk:1 
