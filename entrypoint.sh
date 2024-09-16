@@ -18,8 +18,11 @@ quit() {
 }
 
 trap_handler() {
+  # shellcheck disable=SC2317
   printf '\n'
+  # shellcheck disable=SC2317
   o "Signal caught..."
+  # shellcheck disable=SC2317
   quit
 }
 
