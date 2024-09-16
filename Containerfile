@@ -1,6 +1,8 @@
 FROM alpine:latest AS noop-base
 
-MAINTAINER Travis Wichert <padthaitofuhot@protonmail.com>
+LABEL org.opencontainers.image.authors="Travis Wichert <padthaitofuhot@protonmail.com>"
+LABEL org.opencontainers.image.source="https://github.com/padthaitofuhot/docker-noop"
+LABEL org.opencontainers.image.licenses="Unlicense <https://unlicense.org>"
 
 RUN apk add --no-cache fortune bash
 COPY entrypoint.sh /
