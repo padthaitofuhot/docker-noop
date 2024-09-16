@@ -12,9 +12,15 @@ o() {
   fi
 }
 
+quit() {
+    o "Exiting..."
+    exit "${RETVAL}"
+}
+
 trap_handler() {
-  o "Signal caught, waking up and exiting..."
-  exit 0
+  printf '\n'
+  o "Signal caught..."
+  quit
 }
 
 trap trap_handler SIGINT SIGTERM SIGQUIT SIGHUP
@@ -27,8 +33,6 @@ o " "
 if "${RUNNING}"; then
   o "Going to sleep..."
   sleep infinity
-else
-  o "Exiting..."
 fi
 
-exit 0
+quit

@@ -1,12 +1,17 @@
 ## Flavors
 https://hub.docker.com/repository/docker/padthaitofuhot/noop/general
 
-| **Tag**                           | **Description**                                                  | 
-|:----------------------------------|------------------------------------------------------------------|
-| padthaitofuhot/noop:exited        | Outputs `fortune` and exits with error code 0                    |
-| padthaitofuhot/noop:exited-quiet  | Just exits with error code 0                                     |
-| padthaitofuhot/noop:running       | Outputs `fortune`, sleeps, and exits with error code 0 on signal |
-| padthaitofuhot/noop:running-quiet | Just sleeps and exits with error code 0 on signal                |
+| **Tag**                                 | **Description**                                                  | 
+|:----------------------------------------|------------------------------------------------------------------|
+| padthaitofuhot/noop:exited              | Outputs `fortune` and exits with error code 0                    |
+| padthaitofuhot/noop:exited-quiet        | Just exits with error code 0                                     |
+| padthaitofuhot/noop:running             | Outputs `fortune`, sleeps, and exits with error code 0 on signal |
+| padthaitofuhot/noop:running-quiet       | Just sleeps and exits with error code 0 on signal                |
+| padthaitofuhot/noop:exited-error        | Outputs `fortune` and exits with error code 1                    |
+| padthaitofuhot/noop:exited-quiet-error  | Just exits with error code 1                                     |
+| padthaitofuhot/noop:running-error       | Outputs `fortune`, sleeps, and exits with error code 1 on signal |
+| padthaitofuhot/noop:running-quiet-error | Just sleeps and exits with error code 1 on signal                |
+
 ## Example
 ```
 ┌──[▄‽ᵇ]─[▂▂▂ˡ]─[▄ᵐ▁ˢ]──·[Wed·15·23:35]·
