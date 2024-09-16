@@ -1,4 +1,4 @@
-FROM alpine:latest as noop-base
+FROM alpine:latest AS noop-base
 
 MAINTAINER Travis Wichert <padthaitofuhot@protonmail.com>
 
@@ -7,18 +7,18 @@ COPY entrypoint.sh /
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT /entrypoint.sh
 
-from noop-base as noop-exited
+FROM noop-base AS noop-exited
 ENV RUNNING=false
 ENV VERBOSE=true
 
-from noop-base as noop-exited-quiet
+FROM noop-base AS noop-exited-quiet
 ENV RUNNING=false
 ENV VERBOSE=false
 
-from noop-base as noop-running
+FROM noop-base AS noop-running
 ENV RUNNING=true
 ENV VERBOSE=true
 
-from noop-base as noop-running-quiet
+FROM noop-base AS noop-running-quiet
 ENV RUNNING=true
 ENV VERBOSE=false
