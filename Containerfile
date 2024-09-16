@@ -27,22 +27,22 @@ ENV RUNNING=true
 ENV VERBOSE=false
 ENV RETVAL=0
 
-from noop-base as noop-exited-error
+FROM noop-base AS noop-exited-error
 ENV RUNNING=false
 ENV VERBOSE=true
 ENV RETVAL=1
 
-from noop-base as noop-exited-quiet-error
+FROM noop-base AS noop-exited-quiet-error
 ENV RUNNING=false
 ENV VERBOSE=false
 ENV RETVAL=1
 
-from noop-base as noop-running-error
+FROM noop-base AS noop-running-error
 ENV RUNNING=true
 ENV VERBOSE=true
 ENV RETVAL=1
 
-from noop-base as noop-running-quiet-error
+FROM noop-base AS noop-running-quiet-error
 ENV RUNNING=true
 ENV VERBOSE=false
 ENV RETVAL=1
